@@ -4,12 +4,129 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boilerplate</title>
+  <title>Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   
+  <header class="header">
+    <h1 class="header__title">Ερωτηματολογιο</h1>
+    <div class="header__result" id="quizResult"></div>
+  </header>
+  
+  <main class="main">
 
+    <div class="main__welcome">
+      <p class="main__welcome__message">Τεστάρετε τις γνώσεις σας σχετικά με την υγεία.</p>
+      <button type="button" class="main__welcome__btn" id="startBtn">Ξεκινήστε</button>
+    </div>
+
+    <form class="main__quiz" id="quizForm">
+
+      <div class="main__quiz__question" data-q="0">
+        <p>1. Πότε θεραπεύεται ο οργανισμός μας;</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="a">
+          <span class="form-check-label">Το πρωί</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="b">
+          <span class="form-check-label">Το βράδυ</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="c">
+          <span class="form-check-label">Όταν νηστεύουμε</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="d">
+          <span class="form-check-label">Όταν κοιμόμαστε</span>
+        </div>
+      </div>
+
+      <div class="main__quiz__question" data-q="1">
+        <p>2. Ποιά από τα παρακάτω είναι καλό να αποφεύγουμε όταν θέλουμε καλή υγεία;</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" value="a">
+          <span class="form-check-label">Τη ζάχαρη</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" value="b">
+          <span class="form-check-label">Τους χυμούς</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" value="c">
+          <span class="form-check-label">Τα αναψυκτικά</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" value="d">
+          <span class="form-check-label">Όλα τα παραπάνω</span>
+        </div>
+      </div>
+
+      <div class="main__quiz__question" data-q="2">
+        <p>3. Είναι πιθανόν κάποιες επεξεργασμένες τροφές να γράφουν χωρίς ζάχαρη στην ετικέτα ενώ στην πραγματικότητα να έχουν;</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" value="a">
+          <span class="form-check-label">Ναι</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" value="b">
+          <span class="form-check-label">Όχι</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" value="c">
+          <span class="form-check-label">Μερικές φορές</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q3" value="d">
+          <span class="form-check-label">Δεν ξέρω</span>
+        </div>
+      </div>
+
+      <div class="main__quiz__question" data-q="3">
+        <p>4. Πόσα γεύματα πρέπει να κάνουμε για καλή υγεία μέσα στην ημέρα;</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" value="a">
+          <span class="form-check-label">1-2</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" value="b">
+          <span class="form-check-label">3-4</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" value="c">
+          <span class="form-check-label">5-6</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q4" value="d">
+          <span class="form-check-label">Όσο πιο πολλά γίνεται</span>
+        </div>
+      </div>
+
+      <div class="main__quiz__question" data-q="4">
+        <p>5. Ποιές είναι καλές πρακτικές για καλή υγεία το πρωί;</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" value="a">
+          <span class="form-check-label">Περπάτημα με ήλιο</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" value="b">
+          <span class="form-check-label">Πράσινο τσάι 2 ώρες αφού ξυπνήσουμε</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" value="c">
+          <span class="form-check-label">Νηστεία</span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q5" value="d">
+          <span class="form-check-label">Όλα τα παραπάνω</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Ολοκληρώστε</button>
+    </form>
+  </main>
 
   <script src="scripts/app.js"></script>
 </body>
